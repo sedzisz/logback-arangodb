@@ -6,4 +6,12 @@ language: java
 jdk:
 - oraclejdk8
 
-mvn test
+before_deploy:
+  - "mvn package"
+  - export FOO=$(ls target/foo-version-*.jar)
+
+deploy:
+  provider: releases
+  api_key:
+    secure: yep
+  file: "${FOO}"
