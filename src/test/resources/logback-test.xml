@@ -15,11 +15,12 @@
         <facility>logback-arangodb-test</facility>
         <host>localhost</host>
         <port>8529</port>
-        <database>logback_db</database>
-        <collection>logs</collection>
         <user>logger</user>
         <password>logger</password>
+        <database>logback_db</database>
+        <collection>logs</collection>
         <async>false</async><!-- by default false -->
+        <protocol>HTTP_JSON</protocol><!-- by default VST,HTTP_JSON,HTTP_VPACK avinable onli non ASYNC-MODE -->
     </appender>
 
     <root>
