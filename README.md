@@ -1,4 +1,4 @@
-# logback-arangodb  https://travis-ci.org/sedzisz/logback-arangodb.svg?branch=master
+# logback-arangodb  [![Travis CI Build Status](https://api.travis-ci.org/sedzisz/logback-arangodb.svg?branch=master)]
 
 ### Using with logback.xml
 
