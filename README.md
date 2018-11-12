@@ -6,8 +6,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
 
-    <property name="LOG_DIRECTORY" value="/tmp"/>
-
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%date [%thread] %-5level %logger{36} - %msg%n</pattern>
