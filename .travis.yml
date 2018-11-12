@@ -9,4 +9,12 @@ jdk:
 before_deploy:
   - "mvn package"
   - export FOO=$(ls target/logback-arangodb-*.jar)
+  
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: "$FOO"
+  skip_cleanup: true
+  on:
+    tags: true
 
