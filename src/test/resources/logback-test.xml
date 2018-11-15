@@ -12,7 +12,7 @@
         <port>8529</port>
         <user>logger</user>
         <password>logger</password>
-        <database>logback_db-test</database>
+        <database>logback_db</database>
         <collection>logs</collection>
     </appender>
 
