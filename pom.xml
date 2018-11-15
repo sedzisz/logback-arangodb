@@ -83,11 +83,6 @@
             <artifactId>arangodb-java-driver</artifactId>
             <version>${arangodb.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.arangodb</groupId>
-            <artifactId>arangodb-java-driver-async</artifactId>
-            <version>${arangodb.version}</version>
-        </dependency>
 
         <!-- test framework -->
         <dependency>
