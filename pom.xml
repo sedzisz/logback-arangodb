@@ -7,7 +7,7 @@
     <groupId>com.sedzisz</groupId>
     <artifactId>logback-arangodb</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
 
     <name>Logback ArangoDB Appender</name>
     <url>https://github.com/sedzisz/logback-arangodb</url>
