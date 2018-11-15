@@ -21,34 +21,26 @@ public class ArangoDBAppender<E> extends AppenderBase<E> {
     @Setter
     private String password;
 
-    private AranogDBConnection aranogDBConnection;
+    private ArangoDBConnection arangoDBConnection;
 
     @Override
     protected void append(E logEvent) {
-        aranogDBConnection.append(logEvent);
+        arangoDBConnection.append(logEvent);
     }
 
     @Override
     public void start() {
         super.start();
-        initlizeConnection();
+        initializeConnection();
     }
 
-    private void initlizeConnection() {
-        aranogDBConnection = AranogDBConnection.builder()
-                .host(host)
-                .port(port)
-                .database(database)
-                .collection(collection)
-                .user(user)
-                .password(password)
-                .context(this)
-                .build();
+    private void initializeConnection() {
+        arangoDBConnection = new ArangoDBConnection(this, host, port, user, password, database, collection);
     }
 
     @Override
     public void stop() {
         super.stop();
-        aranogDBConnection.stop();
+        arangoDBConnection.stop();
     }
 }

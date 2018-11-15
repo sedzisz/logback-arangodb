@@ -7,23 +7,20 @@ import com.arangodb.ArangoCollection;
 import com.arangodb.ArangoDB;
 import com.arangodb.entity.BaseDocument;
 import lombok.AccessLevel;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import static java.util.Collections.EMPTY_LIST;
 
 @NoArgsConstructor(access = AccessLevel.NONE)
-class AranogDBConnection<E> {
+class ArangoDBConnection<E> {
 
     private ArangoCollection arangoCollection;
     private ArangoDBAppender context;
 
-    @Builder
-    private AranogDBConnection(ArangoDBAppender context, String host, int port, String user, String password, String database, String collection) {
+    public ArangoDBConnection(ArangoDBAppender context, String host, int port, String user, String password, String database, String collection) {
         this.context = context;
-        final ArangoDB arango = new ArangoDB.Builder()
-                .host(host, port).user(user).password(password).build();
+        final ArangoDB arango = new ArangoDB.Builder().host(host, port).user(user).password(password).build();
         if (arango.db(database).exists()) {
             context.addInfo(String.format("ArangoDb appender will user database: [%s]", database));
             if (arango.db(database).collection(collection).exists()) {

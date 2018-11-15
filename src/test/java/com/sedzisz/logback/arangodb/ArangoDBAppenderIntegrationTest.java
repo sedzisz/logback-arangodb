@@ -6,10 +6,10 @@ import org.junit.Test;
 
 @Ignore
 @Slf4j
-class ArangoDBAppenderIntegrationTest {
+public class ArangoDBAppenderIntegrationTest {
 
     @Test
-    void shouldLogInfo() {
+    public void shouldLogInfo() {
         // given
 
         // when
@@ -22,7 +22,7 @@ class ArangoDBAppenderIntegrationTest {
     }
 
     @Test
-    void shouldLogWarn() {
+    public void shouldLogWarn() {
         // given
 
         // when
@@ -36,7 +36,7 @@ class ArangoDBAppenderIntegrationTest {
     }
 
     @Test
-    void shouldLogError() {
+    public void shouldLogError() {
         // given
 
         // when
@@ -50,7 +50,7 @@ class ArangoDBAppenderIntegrationTest {
     }
 
     @Test
-    void shouldLogDebug() {
+    public void shouldLogDebug() {
         // given
 
         // when
