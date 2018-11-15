@@ -2,15 +2,10 @@ package com.sedzisz.logback.arangodb;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Ignore;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.platform.runner.JUnitPlatform;
-import org.junit.runner.RunWith;
+import org.junit.Test;
 
 @Ignore
 @Slf4j
-@RunWith(JUnitPlatform.class)
-@DisplayName("Integration test with logging to real database!")
 class ArangoDBAppenderIntegrationTest {
 
     @Test

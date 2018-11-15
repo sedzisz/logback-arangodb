@@ -21,11 +21,11 @@ public class ArangoDBAppender<E> extends AppenderBase<E> {
     @Setter
     private String password;
 
-    private AranoDBConnection aranoDBConnection;
+    private AranogDBConnection aranogDBConnection;
 
     @Override
     protected void append(E logEvent) {
-        aranoDBConnection.append(logEvent);
+        aranogDBConnection.append(logEvent);
     }
 
     @Override
@@ -35,7 +35,7 @@ public class ArangoDBAppender<E> extends AppenderBase<E> {
     }
 
     private void initlizeConnection() {
-        aranoDBConnection = AranoDBConnection.builder()
+        aranogDBConnection = AranogDBConnection.builder()
                 .host(host)
                 .port(port)
                 .database(database)
@@ -49,6 +49,6 @@ public class ArangoDBAppender<E> extends AppenderBase<E> {
     @Override
     public void stop() {
         super.stop();
-        aranoDBConnection.stop();
+        aranogDBConnection.stop();
     }
 }

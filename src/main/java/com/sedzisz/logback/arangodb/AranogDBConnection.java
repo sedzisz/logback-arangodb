@@ -14,13 +14,13 @@ import lombok.NoArgsConstructor;
 import static java.util.Collections.EMPTY_LIST;
 
 @NoArgsConstructor(access = AccessLevel.NONE)
-class AranoDBConnection<E> {
+class AranogDBConnection<E> {
 
     private ArangoCollection arangoCollection;
     private ArangoDBAppender context;
 
     @Builder
-    private AranoDBConnection(ArangoDBAppender context, String host, int port, String user, String password, String database, String collection) {
+    private AranogDBConnection(ArangoDBAppender context, String host, int port, String user, String password, String database, String collection) {
         this.context = context;
         final ArangoDB arango = new ArangoDB.Builder()
                 .host(host, port).user(user).password(password).build();
