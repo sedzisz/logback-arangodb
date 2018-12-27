@@ -3,9 +3,6 @@ package com.sedzisz.logback.arangodb;
 import ch.qos.logback.core.AppenderBase;
 import lombok.Setter;
 
-/**
- * @author Zdzisław Sędek <zdzislaw.sedek@gmail.com>
- */
 public class ArangoDBAppender<E> extends AppenderBase<E> {
 
     @Setter
